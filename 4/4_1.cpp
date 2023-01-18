@@ -28,7 +28,7 @@ int main (int argc, char * argv[])
 {    
 
     if (!fork()) {
-        cout << "child PPID =" << getppid() << endl;
+        cout << "child PID =" << getpid() << endl;
         signal(SIGINT, catch_signal_child);
         signal(SIGTERM, SIG_IGN);
         signal(SIGSEGV, SIG_DFL);
@@ -39,7 +39,7 @@ int main (int argc, char * argv[])
         pause(); 
     }
     else {
-        cout << "parent PPID =" << getppid() << endl;
+        cout << "parent PID =" << getpid() << endl;
         signal(SIGINT, catch_signal_parent);
         signal(SIGTERM, SIG_IGN);
         signal(SIGSEGV, SIG_DFL);
