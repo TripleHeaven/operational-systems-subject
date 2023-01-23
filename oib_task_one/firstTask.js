@@ -49,7 +49,6 @@ for (let i = 0; i < alphabetClosed.length; i++) {
 // Шифрование
 
 let inputPhraseTrimmed = processStr(inputPhrase);
-console.log("test", inputPhraseTrimmed.length);
 let cryptedResult = [];
 for (let i = 0; i < inputPhraseTrimmed.length; i++) {
   if ((i + 1) % 5 === 0) {
@@ -70,12 +69,11 @@ for (let i = 0; i < cryptedResultTrimmed.length; i++) {
   encryptResult.push(getByValue(cryptedMap, cryptedResultTrimmed[i]));
 }
 encryptResult = encryptResult.join("");
-console.log(encryptResult.length, cryptedResult.length);
 // зашифрованное сообщение
 console.log("Encrypted message", cryptedResult);
 // расшифрованное сообщение
-console.log("Decrypted result", encryptResult);
-// исходное сообщение
-console.log("Base message", inputPhrase);
-// таблица шифрования
-console.log("Table", cryptedMap);
+console.log("\n\nDecrypted result", encryptResult);
+// // исходное сообщение
+// console.log("Base message", inputPhrase);
+// // таблица шифрования
+console.log("\n\nTable", cryptedMap);
